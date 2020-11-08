@@ -13,6 +13,7 @@
 		693E46C12558AC0B0033ECF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693E46BF2558AC0B0033ECF8 /* Main.storyboard */; };
 		693E46C32558AC0D0033ECF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 693E46C22558AC0D0033ECF8 /* Assets.xcassets */; };
 		693E46C62558AC0D0033ECF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693E46C42558AC0D0033ECF8 /* LaunchScreen.storyboard */; };
+		693E46CF2558B4DE0033ECF8 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E46CE2558B4DE0033ECF8 /* Word.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		693E46C22558AC0D0033ECF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		693E46C52558AC0D0033ECF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		693E46C72558AC0D0033ECF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		693E46CE2558B4DE0033ECF8 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		693E46B82558AC0B0033ECF8 /* Learn Useful Words */ = {
 			isa = PBXGroup;
 			children = (
+				693E46CE2558B4DE0033ECF8 /* Word.swift */,
 				693E46B92558AC0B0033ECF8 /* AppDelegate.swift */,
 				693E46BB2558AC0B0033ECF8 /* SceneDelegate.swift */,
 				693E46BD2558AC0B0033ECF8 /* ViewController.swift */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				693E46BE2558AC0B0033ECF8 /* ViewController.swift in Sources */,
+				693E46CF2558B4DE0033ECF8 /* Word.swift in Sources */,
 				693E46BA2558AC0B0033ECF8 /* AppDelegate.swift in Sources */,
 				693E46BC2558AC0B0033ECF8 /* SceneDelegate.swift in Sources */,
 			);
