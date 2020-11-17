@@ -10,10 +10,13 @@
 		6925ED34255E1EDF00C18EE5 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925ED33255E1EDF00C18EE5 /* Word.swift */; };
 		693E46BA2558AC0B0033ECF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E46B92558AC0B0033ECF8 /* AppDelegate.swift */; };
 		693E46BC2558AC0B0033ECF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E46BB2558AC0B0033ECF8 /* SceneDelegate.swift */; };
-		693E46BE2558AC0B0033ECF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E46BD2558AC0B0033ECF8 /* ViewController.swift */; };
+		693E46BE2558AC0B0033ECF8 /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E46BD2558AC0B0033ECF8 /* WordsViewController.swift */; };
 		693E46C12558AC0B0033ECF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693E46BF2558AC0B0033ECF8 /* Main.storyboard */; };
 		693E46C32558AC0D0033ECF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 693E46C22558AC0D0033ECF8 /* Assets.xcassets */; };
 		693E46C62558AC0D0033ECF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693E46C42558AC0D0033ECF8 /* LaunchScreen.storyboard */; };
+		696384F42563693C0025C61A /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696384F32563693C0025C61A /* K.swift */; };
+		699E06F4255EE998003B9D53 /* WordsApiImpl+WordsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699E06F3255EE998003B9D53 /* WordsApiImpl+WordsApi.swift */; };
+		699E06FF255F6597003B9D53 /* LibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699E06FE255F6597003B9D53 /* LibraryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +24,14 @@
 		693E46B62558AC0B0033ECF8 /* Learn Useful Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Useful Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		693E46B92558AC0B0033ECF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		693E46BB2558AC0B0033ECF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		693E46BD2558AC0B0033ECF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		693E46BD2558AC0B0033ECF8 /* WordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewController.swift; sourceTree = "<group>"; };
 		693E46C02558AC0B0033ECF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		693E46C22558AC0D0033ECF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		693E46C52558AC0D0033ECF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		693E46C72558AC0D0033ECF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		696384F32563693C0025C61A /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		699E06F3255EE998003B9D53 /* WordsApiImpl+WordsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordsApiImpl+WordsApi.swift"; sourceTree = "<group>"; };
+		699E06FE255F6597003B9D53 /* LibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,12 +45,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6925ED32255E1ECE00C18EE5 /* Model */ = {
+		6925ED32255E1ECE00C18EE5 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
-				6925ED33255E1EDF00C18EE5 /* Word.swift */,
+				699E06F3255EE998003B9D53 /* WordsApiImpl+WordsApi.swift */,
 			);
-			path = Model;
+			path = DataAccess;
 			sourceTree = "<group>";
 		};
 		693E46AD2558AC0B0033ECF8 = {
@@ -66,16 +72,43 @@
 		693E46B82558AC0B0033ECF8 /* Learn Useful Words */ = {
 			isa = PBXGroup;
 			children = (
-				6925ED32255E1ECE00C18EE5 /* Model */,
+				699E06FC255F62BF003B9D53 /* Model */,
+				699E06F9255F6238003B9D53 /* View */,
+				699E06EF255EE778003B9D53 /* Controller */,
+				6925ED32255E1ECE00C18EE5 /* DataAccess */,
 				693E46B92558AC0B0033ECF8 /* AppDelegate.swift */,
 				693E46BB2558AC0B0033ECF8 /* SceneDelegate.swift */,
-				693E46BD2558AC0B0033ECF8 /* ViewController.swift */,
-				693E46BF2558AC0B0033ECF8 /* Main.storyboard */,
 				693E46C22558AC0D0033ECF8 /* Assets.xcassets */,
 				693E46C42558AC0D0033ECF8 /* LaunchScreen.storyboard */,
 				693E46C72558AC0D0033ECF8 /* Info.plist */,
+				696384F32563693C0025C61A /* K.swift */,
 			);
 			path = "Learn Useful Words";
+			sourceTree = "<group>";
+		};
+		699E06EF255EE778003B9D53 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				693E46BD2558AC0B0033ECF8 /* WordsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		699E06F9255F6238003B9D53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				693E46BF2558AC0B0033ECF8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		699E06FC255F62BF003B9D53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6925ED33255E1EDF00C18EE5 /* Word.swift */,
+				699E06FE255F6597003B9D53 /* LibraryService.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,10 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693E46BE2558AC0B0033ECF8 /* ViewController.swift in Sources */,
+				693E46BE2558AC0B0033ECF8 /* WordsViewController.swift in Sources */,
+				696384F42563693C0025C61A /* K.swift in Sources */,
 				6925ED34255E1EDF00C18EE5 /* Word.swift in Sources */,
 				693E46BA2558AC0B0033ECF8 /* AppDelegate.swift in Sources */,
+				699E06FF255F6597003B9D53 /* LibraryService.swift in Sources */,
 				693E46BC2558AC0B0033ECF8 /* SceneDelegate.swift in Sources */,
+				699E06F4255EE998003B9D53 /* WordsApiImpl+WordsApi.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

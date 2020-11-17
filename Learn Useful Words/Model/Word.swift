@@ -8,6 +8,7 @@
 import Foundation
 
 struct Word {
+    let id: String
     let value: String
     let nbOccurrences: Int
 }
