@@ -8,7 +8,6 @@
 import Foundation
 
 struct K {
-    static let navigationItemTitle = "Library"
     static let tableViewCellIdentifier = "ReusableCell"
     static let existingWordNbOccurrencesIncrement = 1
     static let newWordNbOccurrences = 1

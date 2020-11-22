@@ -23,18 +23,7 @@ class WordsViewController: UIViewController {
         addWordTextField.delegate = self
         libraryService.delegate = self
         
-        navigationItem.title = K.navigationItemTitle
-        libraryService.loadFrequentWords();
-        
-        //        navigationController?.navigationBar.prefersLargeTitles = true
-        //        let appearance = UINavigationBarAppearance()
-        //        appearance.backgroundColor = .black
-        ////        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        //        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        ////        navigationController?.navigationBar.tintColor = .white
-        //        navigationController?.navigationBar.standardAppearance = appearance
-        //        navigationController?.navigationBar.compactAppearance = appearance
-        //        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        libraryService.loadFrequentWords()
     }
 }
 
@@ -45,8 +34,12 @@ extension WordsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.tableViewCellIdentifier, for: indexPath)
+        
         var cellContentConfiguration = cell.defaultContentConfiguration();
-        cellContentConfiguration.text = "\(words[indexPath.row].value) \(words[indexPath.row].nbOccurrences)"
+        cellContentConfiguration.textProperties.color = .white
+        cellContentConfiguration.text = (words[indexPath.row].value)
+        cellContentConfiguration.secondaryTextProperties.color = .white
+        cellContentConfiguration.secondaryText = "\(words[indexPath.row].nbOccurrences) times"
         cell.contentConfiguration = cellContentConfiguration
         return cell
     }
