@@ -8,46 +8,91 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Words View Controller-->
+        <!--Frequent Words-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WordsViewController" customModule="Learn_Useful_Words" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LHB-tg-WPk">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="624"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" rowHeight="63" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LHB-tg-WPk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" id="hcp-hR-X34">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" textLabel="l4Y-Id-wcC" detailTextLabel="5fn-0C-lhY" rowHeight="50" style="IBUITableViewCellStyleSubtitle" id="Rc8-HS-9cr">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hcp-hR-X34" id="zjB-Nz-16m">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rc8-HS-9cr" id="iEA-ck-Ymy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l4Y-Id-wcC">
+                                                    <rect key="frame" x="16" y="8" width="33" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5fn-0C-lhY">
+                                                    <rect key="frame" x="16" y="28.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iS1-3l-5IC">
-                                <rect key="frame" x="40" y="627" width="331" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-Kx-lIe">
-                                <rect key="frame" x="3" y="627" width="32" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="systemGreenColor"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zr-y6-vHf">
+                                <rect key="frame" x="0.0" y="573" width="375" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-Kx-lIe">
+                                        <rect key="frame" x="8" y="7" width="29" height="36"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Nqy-cW-Y81"/>
+                                            <constraint firstAttribute="width" constant="29" id="uT0-7I-WdZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add a Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iS1-3l-5IC">
+                                        <rect key="frame" x="45" y="0.0" width="322" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="VRL-Kx-lIe" firstAttribute="bottom" secondItem="3Zr-y6-vHf" secondAttribute="bottomMargin" constant="3" id="5T0-w1-BrK"/>
+                                    <constraint firstItem="iS1-3l-5IC" firstAttribute="top" secondItem="3Zr-y6-vHf" secondAttribute="top" id="KTu-ye-rSz"/>
+                                    <constraint firstItem="iS1-3l-5IC" firstAttribute="trailing" secondItem="3Zr-y6-vHf" secondAttribute="trailingMargin" id="Z2v-J9-Z2a"/>
+                                    <constraint firstAttribute="height" constant="50" id="Zeo-bD-Hbk"/>
+                                    <constraint firstItem="VRL-Kx-lIe" firstAttribute="leading" secondItem="3Zr-y6-vHf" secondAttribute="leadingMargin" id="hZh-Te-cTX"/>
+                                    <constraint firstItem="iS1-3l-5IC" firstAttribute="centerY" secondItem="3Zr-y6-vHf" secondAttribute="centerY" id="pWu-uF-ReI"/>
+                                    <constraint firstItem="iS1-3l-5IC" firstAttribute="leading" secondItem="VRL-Kx-lIe" secondAttribute="trailing" constant="8" id="s0T-zm-PwT"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="3Zr-y6-vHf" firstAttribute="top" secondItem="LHB-tg-WPk" secondAttribute="bottom" id="3un-Nj-d6E"/>
+                            <constraint firstItem="3Zr-y6-vHf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="91v-Yo-i1N"/>
+                            <constraint firstItem="3Zr-y6-vHf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EP9-Gy-hJm"/>
+                            <constraint firstItem="LHB-tg-WPk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I81-LV-Nnh"/>
+                            <constraint firstItem="LHB-tg-WPk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pwo-fH-u8z"/>
+                            <constraint firstItem="3Zr-y6-vHf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="nQm-to-jc8"/>
+                            <constraint firstItem="LHB-tg-WPk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="u8c-v4-uwT"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WGi-GN-pLl"/>
+                    <navigationItem key="navigationItem" title="Frequent Words" id="WGi-GN-pLl"/>
                     <connections>
                         <outlet property="addWordTextField" destination="iS1-3l-5IC" id="3fX-PB-vwg"/>
                         <outlet property="wordsTableView" destination="LHB-tg-WPk" id="HR5-TM-zkn"/>
@@ -62,13 +107,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3FB-cT-73B" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="CqB-40-Iws">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="CqB-40-Iws">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
