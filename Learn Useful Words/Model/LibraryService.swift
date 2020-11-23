@@ -36,6 +36,6 @@ struct LibraryService {
     }
     
     func addWord(with wordValue: String) {
-        wordsApi.add(wordValue, callback: self.onWordAddedOrDeleted)
+        wordsApi.add(wordValue.trimmingCharacters(in: .whitespacesAndNewlines), callback: self.onWordAddedOrDeleted)
     }
 }
