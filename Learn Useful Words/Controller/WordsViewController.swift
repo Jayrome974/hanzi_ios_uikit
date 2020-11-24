@@ -58,11 +58,18 @@ extension WordsViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if let wordValue = textField.text {
-            libraryService.addWord(with: wordValue)
+        if !isTextFieldValueEmpty(textField) {
+            libraryService.addWord(with: textField.text!)
+            textField.text = ""
+        }
+    }
+    
+    fileprivate func isTextFieldValueEmpty(_ textField: UITextField) -> Bool {
+        if let wordValue = textField.text, !wordValue.isEmpty {
+            return false
         }
         
-        textField.text = ""
+        return true;
     }
 }
 

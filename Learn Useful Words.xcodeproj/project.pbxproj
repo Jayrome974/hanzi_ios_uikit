@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19ACE7022AB496E5088A1029 /* Pods_Learn_Useful_Words.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F2C122DFD1CAFF9976A0F93 /* Pods_Learn_Useful_Words.framework */; };
 		6925ED34255E1EDF00C18EE5 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6925ED33255E1EDF00C18EE5 /* Word.swift */; };
 		693E46BA2558AC0B0033ECF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E46B92558AC0B0033ECF8 /* AppDelegate.swift */; };
 		693E46BC2558AC0B0033ECF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E46BB2558AC0B0033ECF8 /* SceneDelegate.swift */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2459B8D189A9C5F52D232828 /* Pods-Learn Useful Words.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Learn Useful Words.debug.xcconfig"; path = "Target Support Files/Pods-Learn Useful Words/Pods-Learn Useful Words.debug.xcconfig"; sourceTree = "<group>"; };
+		2F2C122DFD1CAFF9976A0F93 /* Pods_Learn_Useful_Words.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Learn_Useful_Words.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6925ED33255E1EDF00C18EE5 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		693E46B62558AC0B0033ECF8 /* Learn Useful Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn Useful Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		693E46B92558AC0B0033ECF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		696384F32563693C0025C61A /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		699E06F3255EE998003B9D53 /* WordsApiImpl+WordsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordsApiImpl+WordsApi.swift"; sourceTree = "<group>"; };
 		699E06FE255F6597003B9D53 /* LibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryService.swift; sourceTree = "<group>"; };
+		CB2A12A25D23FCF758FE9B28 /* Pods-Learn Useful Words.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Learn Useful Words.release.xcconfig"; path = "Target Support Files/Pods-Learn Useful Words/Pods-Learn Useful Words.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,12 +43,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19ACE7022AB496E5088A1029 /* Pods_Learn_Useful_Words.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65334A091414331A5BE56BD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F2C122DFD1CAFF9976A0F93 /* Pods_Learn_Useful_Words.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6925ED32255E1ECE00C18EE5 /* DataAccess */ = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +71,8 @@
 			children = (
 				693E46B82558AC0B0033ECF8 /* Learn Useful Words */,
 				693E46B72558AC0B0033ECF8 /* Products */,
+				EE69AB36249B7BE90714030B /* Pods */,
+				65334A091414331A5BE56BD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +126,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EE69AB36249B7BE90714030B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2459B8D189A9C5F52D232828 /* Pods-Learn Useful Words.debug.xcconfig */,
+				CB2A12A25D23FCF758FE9B28 /* Pods-Learn Useful Words.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 693E46CA2558AC0D0033ECF8 /* Build configuration list for PBXNativeTarget "Learn Useful Words" */;
 			buildPhases = (
+				599A46F3B5ABFC11EF4C2FC0 /* [CP] Check Pods Manifest.lock */,
 				693E46B22558AC0B0033ECF8 /* Sources */,
 				693E46B32558AC0B0033ECF8 /* Frameworks */,
 				693E46B42558AC0B0033ECF8 /* Resources */,
+				AAD7AE04E6FEB65883A0664B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +201,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		599A46F3B5ABFC11EF4C2FC0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Learn Useful Words-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAD7AE04E6FEB65883A0664B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Learn Useful Words/Pods-Learn Useful Words-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Learn Useful Words/Pods-Learn Useful Words-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Learn Useful Words/Pods-Learn Useful Words-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		693E46B22558AC0B0033ECF8 /* Sources */ = {
@@ -264,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -319,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -331,6 +399,7 @@
 		};
 		693E46CB2558AC0D0033ECF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2459B8D189A9C5F52D232828 /* Pods-Learn Useful Words.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -349,6 +418,7 @@
 		};
 		693E46CC2558AC0D0033ECF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB2A12A25D23FCF758FE9B28 /* Pods-Learn Useful Words.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
