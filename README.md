@@ -2,7 +2,7 @@
 iOS App
 
 ## Screenshots
-![HomePage](/misc/AppScreenshots.jpg)
+![HomePage](/misc/AppScreenshots.png)
 
 ## Application
 [Architecture](https://github.com/Jayrome974/learnusefulwords)
