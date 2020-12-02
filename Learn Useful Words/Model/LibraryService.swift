@@ -12,30 +12,30 @@ protocol LibrayServiceDelegate {
 }
 
 struct LibraryService {
-    let wordsApi: InMemoryWordsApi
+    private let wordsApi: WordsApi
     var delegate: LibrayServiceDelegate?
-    
-    init() {
-        wordsApi = InMemoryWordsApi()
+    	
+    init(_ wordsApi:WordsApi) {
+        self.wordsApi = wordsApi
     }
     
     func loadFrequentWords() {
-        wordsApi.fetchFrequentWords(callback: self.onFrequentWordsFetched)
+        wordsApi.fetchFrequentWords(completionHandler: self.onFrequentWordsFetched)
     }
     
-    func onFrequentWordsFetched(frequentWords: [Word]) {
+    fileprivate func onFrequentWordsFetched(frequentWords: [Word]) {
         self.delegate?.didLoadFrequentWords(frequentWords)
     }
     
     func deleteWord(with wordId: String) {
-        wordsApi.deleteWord(with: wordId, callback: self.onWordAddedOrDeleted)
+        wordsApi.deleteWord(with: wordId, completionHandler: self.onWordAddedOrDeleted)
     }
     
-    func onWordAddedOrDeleted() {
+    fileprivate func onWordAddedOrDeleted() {
         loadFrequentWords()
     }
     
     func addWord(with wordValue: String) {
-        wordsApi.add(wordValue.trimmingCharacters(in: .whitespacesAndNewlines), callback: self.onWordAddedOrDeleted)
+        wordsApi.add(wordValue.trimmingCharacters(in: .whitespacesAndNewlines), completionHandler: self.onWordAddedOrDeleted)
     }
 }

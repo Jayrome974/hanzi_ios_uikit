@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Word {
+struct Word: Decodable {
     let id: String
     let value: String
     let nbOccurrences: Int

@@ -94,7 +94,13 @@
                             <constraint firstItem="LHB-tg-WPk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="u8c-v4-uwT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Frequent Words" id="WGi-GN-pLl"/>
+                    <navigationItem key="navigationItem" title="Frequent Words" id="WGi-GN-pLl">
+                        <barButtonItem key="rightBarButtonItem" title="Log In" id="dPQ-8w-1z1">
+                            <connections>
+                                <action selector="logInPressed:" destination="BYZ-38-t0r" id="Ztn-RP-f60"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addWordTextField" destination="iS1-3l-5IC" id="3fX-PB-vwg"/>
                         <outlet property="wordsTableView" destination="LHB-tg-WPk" id="HR5-TM-zkn"/>

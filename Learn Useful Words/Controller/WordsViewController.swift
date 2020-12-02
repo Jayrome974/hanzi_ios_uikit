@@ -6,24 +6,37 @@
 //
 
 import UIKit
+import SafariServices
 
 class WordsViewController: UIViewController {
     
     @IBOutlet weak var wordsTableView: UITableView!
     @IBOutlet weak var addWordTextField: UITextField!
     
-    var libraryService = LibraryService()
+    private var libraryService: LibraryService?
     
-    var words: [Word] = []
+    private var words: [Word] = []
+    
+    func setLibraryService(_ libraryService:LibraryService) {
+        self.libraryService = libraryService
+        self.libraryService!.delegate = self
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         wordsTableView.dataSource = self
         addWordTextField.delegate = self
-        libraryService.delegate = self
-        
-        libraryService.loadFrequentWords()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        libraryService?.loadFrequentWords()
+    }
+    
+    @IBAction func logInPressed(_ sender: UIBarButtonItem) {
+        let safariViewController = SFSafariViewController(url: OAuthService.authorizeEndpointUrl)
+        self.present(safariViewController, animated: true, completion: nil)
     }
 }
 
@@ -46,7 +59,7 @@ extension WordsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            libraryService.deleteWord(with: words[indexPath.row].id)
+            libraryService?.deleteWord(with: words[indexPath.row].id)
         }
     }
 }
@@ -59,7 +72,7 @@ extension WordsViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if !isTextFieldValueEmpty(textField) {
-            libraryService.addWord(with: textField.text!)
+            libraryService?.addWord(with: textField.text!)
             textField.text = ""
         }
     }
@@ -76,6 +89,8 @@ extension WordsViewController: UITextFieldDelegate {
 extension WordsViewController: LibrayServiceDelegate {
     func didLoadFrequentWords(_ frequentWords: [Word]) {
         words = frequentWords
-        wordsTableView.reloadData()
+        DispatchQueue.main.async {
+            self.wordsTableView.reloadData()
+        }
     }
 }
