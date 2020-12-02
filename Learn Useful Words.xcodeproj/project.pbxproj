@@ -21,6 +21,7 @@
 		69A1B3432575609E008FF044 /* OAuthTokenEndpointResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1B3422575609E008FF044 /* OAuthTokenEndpointResponse.swift */; };
 		69A1B346257586EC008FF044 /* OAuthGetTokenStateImpl+OAuthGetTokenState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A1B345257586EC008FF044 /* OAuthGetTokenStateImpl+OAuthGetTokenState.swift */; };
 		69BA4E7725709EEF00C72B61 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BA4E7625709EEF00C72B61 /* OAuthService.swift */; };
+		69C69A982578198F00B74EA7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 69C69A972578198F00B74EA7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		69A1B3422575609E008FF044 /* OAuthTokenEndpointResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthTokenEndpointResponse.swift; sourceTree = "<group>"; };
 		69A1B345257586EC008FF044 /* OAuthGetTokenStateImpl+OAuthGetTokenState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OAuthGetTokenStateImpl+OAuthGetTokenState.swift"; sourceTree = "<group>"; };
 		69BA4E7625709EEF00C72B61 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
+		69C69A972578198F00B74EA7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CB2A12A25D23FCF758FE9B28 /* Pods-Learn Useful Words.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Learn Useful Words.release.xcconfig"; path = "Target Support Files/Pods-Learn Useful Words/Pods-Learn Useful Words.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		693E46AD2558AC0B0033ECF8 = {
 			isa = PBXGroup;
 			children = (
+				69C69A972578198F00B74EA7 /* README.md */,
 				6968DCED2578148A0025F2B7 /* Misc */,
 				693E46B82558AC0B0033ECF8 /* Learn Useful Words */,
 				693E46B72558AC0B0033ECF8 /* Products */,
@@ -213,6 +216,7 @@
 			files = (
 				693E46C62558AC0D0033ECF8 /* LaunchScreen.storyboard in Resources */,
 				693E46C32558AC0D0033ECF8 /* Assets.xcassets in Resources */,
+				69C69A982578198F00B74EA7 /* README.md in Resources */,
 				693E46C12558AC0B0033ECF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
