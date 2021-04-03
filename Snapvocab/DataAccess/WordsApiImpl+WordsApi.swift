@@ -16,13 +16,13 @@ protocol WordsApi {
 struct InMemoryWordsApi: WordsApi {
     
     private static var words: [Word] = [
-        Word(id: "134", value: "Welcome!", nbOccurrences: 5),
-        Word(id: "343", value: "This is a demo mode", nbOccurrences: 3),
-        Word(id: "666", value: "Please log in to manage your own library", nbOccurrences: 5),
+        Word(id: "134", value: "Welcome! This is a demo mode", nbOccurrences: 5),
+        Word(id: "666", value: "Please log in to manage your library", nbOccurrences: 5),
         Word(id: "6ee", value: "thank you", nbOccurrences: 6),
         Word(id: "d12", value: "謝謝", nbOccurrences: 3),
         Word(id: "5ed", value: "gracias", nbOccurrences: 10),
-        Word(id: "lop", value: "merci", nbOccurrences: 4)
+        Word(id: "lop", value: "merci", nbOccurrences: 4),
+        Word(id: "g12", value: "ありがとう", nbOccurrences: 3),
     ]
     
     func add(_ wordValue: String, completionHandler: @escaping () -> Void) {
