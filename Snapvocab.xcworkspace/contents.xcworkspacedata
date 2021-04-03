@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Learn Useful Words.xcodeproj">
+      location = "group:/Users/Jay/Documents/DEV/workspaceXcode/Snapvocab/Snapvocab.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Snapvocab.xcodeproj">
    </FileRef>
 </Workspace>

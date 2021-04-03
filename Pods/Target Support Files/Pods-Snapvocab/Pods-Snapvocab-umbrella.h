@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Learn_Useful_WordsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Learn_Useful_WordsVersionString[];
+FOUNDATION_EXPORT double Pods_SnapvocabVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SnapvocabVersionString[];
 

@@ -1,0 +1,6 @@
+framework module Pods_Snapvocab {
+  umbrella header "Pods-Snapvocab-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -33,7 +33,7 @@ struct K {
     }
     
     struct oAuth {
-        static let host = "auth.learnusefulwords.com"
+        static let host = "auth.snapvocab.com"
         static let authorizeEndpoint = "/authorize"
         static let authorizeClientIdQueryName = "client_id"
         static let clientId = "4t6klr6pti5hjogcn89m1m95p"
@@ -56,7 +56,7 @@ struct K {
     }
     
     struct backendApi {
-        static let host = "learnusefulwords.com"
+        static let host = "snapvocab.com"
         static let getWordsEndpoint = "/Prod/words"
         static let getWordsEndpointHttpMethod = "GET"
         static let addWordEndpoint = "/Prod/addingsword"

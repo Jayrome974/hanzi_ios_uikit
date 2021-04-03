@@ -1,8 +1,8 @@
 platform :ios, '12.0'
 
-target 'Learn Useful Words' do
+target 'Snapvocab' do
   use_frameworks!
 
-  # Pods for Learn Useful Words
+  # Pods for Snapvocab
   pod 'IQKeyboardManagerSwift'
 end
